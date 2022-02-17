@@ -1,0 +1,12 @@
+.button {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 18px 35px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  line-height: 1;
+}
+.button--theme--white {
+  background: #FEDB3F;
+  color: #000000;
+}
