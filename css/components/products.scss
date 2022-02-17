@@ -14,22 +14,22 @@
 
     &-section__title{
         text-align: left;
-        font-size: 48px;
+        font-size: rem(48px);
         text-transform: uppercase;
         padding: 0px 0px 0px 80px;
 
         @include phones{
             padding: 0px 0px 0px 0px;
-            font-size: 40px;
+            font-size: rem(40px);
         }
     }
 
     @include tablets{
-        top: -245px;
+        top: rem(-245px);
     }
 
     @include phones{
-        top: -218px;
+        top: rem(-218px);
     }
 }
 
@@ -39,15 +39,13 @@
     
 
     @include tablets{
-        height: 837px;
-        width: 102px;
-        transform: translateY(246px);
+        height: rem(720px);
+        width: rem(102px);
     }
 
     @include phones{
-        height: 838px;
-        width: 102px;
-        transform: translateY(218px);
+        height: rem(720px);
+        width: rem(102px);
     }
 }
 
@@ -66,7 +64,7 @@
     font-size: 41px;
     font-weight: bold;
     transform: rotate(270deg);
-    margin: -121px 0px 0px 0px;
+    margin: rem(-121px) rem(0px) rem(0px) rem(0px);
 }
 
 .products-menu__content{
@@ -77,20 +75,23 @@
     overflow: hidden;
     transition: width .7s;
 
+
     @include tablets{
-        height: 615px;
+        height: rem(722px);
+        transform: translateY(rem(245px));
     }
 
     @include phones{
-        height: 543px;
+        height: rem(720px);
+        transform: translateY(rem(218px));
     }
 }
 
 .products-menu__container{
-    padding: 40px 73px 45px 26px;
+    padding: rem(40px) rem(73px) rem(45px) rem(26px);
 
     @include phones{
-        padding: 20px 0px 0px 10px;
+        padding: rem(20px) rem(0px) rem(0px) rem(10px);
     }
 }
 
