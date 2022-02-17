@@ -3,7 +3,7 @@ let durationControl;
 let soundControl;
 let intervalId;
 
-document.addEventListener('DOMContentLoaded', e=>{
+document.addEventListener('DOMContentLoaded', (e) =>{
 
     video = document.getElementById('video');
 
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', e=>{
     soundControl.min = 0;
     soundControl.max = 10;
 
-    soundControl.value = soundControl.max
-})
+    soundControl.value = soundControl.max;
+});
 
 function playStop(){
     let playImg = document.querySelector('.video__play');
@@ -47,16 +47,16 @@ function playStop(){
         video.pause();
         clearInterval(intervalId);
     }
-}
+};
 
 function updateDuration() {
     durationControl.value = video.currentTime;
-}
+};
 
 function stopInterval(){
     video.pause();
     clearInterval(intervalId);
-}
+};
 
 function setVideoDuration(){
     if(video.paused){
@@ -68,11 +68,11 @@ function setVideoDuration(){
     video.currentTime = durationControl.value;
     intervalId = setInterval(updateDuration, 1000/66);
 
-}
+};
 
 function changeSoundVolume(){
     video.volume = soundControl.value / 10;
-}
+};
 
 function soundOf(){
     if(video.volume === 0){
@@ -83,4 +83,4 @@ function soundOf(){
         video.volume = 0;
         soundControl.value = 0;
     }
-}
+};

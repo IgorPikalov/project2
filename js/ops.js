@@ -6,15 +6,23 @@ let inScroll = false;
 
 sections.first().addClass("active");
 
-const countSectionPosition = sectionEq => {
-    return sectionEq * -100;
-}
+
 
 const performTransition = (sectionEq) => {
 
     if(inScroll === false) {
         inScroll = true;
-        const position = countSectionPosition(sectionEq);
+        const position = sectionEq * -100;
+
+        const currentSection = sections.eq(sectionEq);
+        const menuTheme = currentSection.attr("data-sidemenu-theme");
+        const sideMenu = $(".fixed-menu");
+
+        if(menuTheme === "black") {
+            sideMenu.addClass("fixed-menu--shadowed");
+        } else {
+            sideMenu.removeClass("fixed-menu--shadowed");
+        }
 
         display.css({
             transform: `translateY(${position}%)`,
@@ -24,6 +32,14 @@ const performTransition = (sectionEq) => {
 
         setTimeout (() => {
             inScroll = false
+
+            sideMenu
+              .find(".fixed-menu__item")
+              .eq(sectionEq)
+              .addClass("fixed-menu__item--active")
+              .siblings()
+              .removeClass("fixed-menu__item--active");
+
         }, 1300);
     }
 };
@@ -72,6 +88,8 @@ $(window).on("keydown", (e) => {
     }
 });
 
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
 $("[data-scroll-to]").click( (e) =>{
     e.preventDefault();
 
@@ -81,3 +99,4 @@ $("[data-scroll-to]").click( (e) =>{
     
     performTransition(reqSection.index());
 });
+
