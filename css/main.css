@@ -1481,6 +1481,15 @@ header {
   transition: 0.3s ease-in-out;
   margin: 0rem 0rem 0rem 0.5555555556rem;
 }
+@media screen and (max-width: 768px) {
+  .team__item-active .team__content {
+    display: block;
+    height: 380px !important;
+    overflow: hidden;
+    -webkit-transition: height 0.8s;
+    transition: height 0.8s;
+  }
+}
 
 .team__member {
   height: 16rem;
@@ -1523,6 +1532,11 @@ header {
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
   height: 0%;
+}
+@media screen and (max-width: 768px) {
+  .team__content {
+    height: 0px;
+  }
 }
 
 .team__content-block {
