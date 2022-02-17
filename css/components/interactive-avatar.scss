@@ -1,0 +1,45 @@
+.reviews-switcher{
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-switcher__link{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    width: rem(85px);
+    height: rem(85px);
+
+}
+
+
+.reviews-switcher__item{
+    width: rem(85px);
+    height: rem(85px);
+    border-radius: 50%;
+    overflow: hidden;
+    border: rem(5.5px) solid transparent;
+    margin: rem(10px) rem(5px) rem(0px) rem(0px);
+    cursor: pointer;
+
+    &:hover{
+        border-color: #FEDB3F; 
+    }
+  
+    &.active{
+      border-color: #FEDB3F;
+    }
+
+    @include tablets{
+        width: rem(88px);
+        height: rem(88px);
+    }
+
+    @include phones{
+        width: rem(95px);
+        height: rem(95px);
+    }
+}
+
+
+

@@ -1,0 +1,99 @@
+.products-menu-section{
+    background: url("./../../img/doska.jpg") center center/cover no-repeat;
+    position: relative;
+    color: white;
+    height: 100%;
+}
+
+.products-menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+
+    &-section__title{
+        text-align: left;
+        font-size: 48px;
+        text-transform: uppercase;
+        padding: 0px 0px 0px 80px;
+
+        @include phones{
+            padding: 0px 0px 0px 0px;
+            font-size: 40px;
+        }
+    }
+
+    @include tablets{
+        top: -245px;
+    }
+
+    @include phones{
+        top: -218px;
+    }
+}
+
+.products-menu__image{
+    position: relative;
+    height: 100vh;
+    
+
+    @include tablets{
+        height: 837px;
+        width: 102px;
+        transform: translateY(246px);
+    }
+
+    @include phones{
+        height: 838px;
+        width: 102px;
+        transform: translateY(218px);
+    }
+}
+
+.products-menu__item{
+    display: flex;
+    position: relative;
+}
+
+.products-menu__title{
+    position: relative;
+    width: 102px;
+    text-decoration: none;
+}
+
+.products-menu__text{
+    font-size: 41px;
+    font-weight: bold;
+    transform: rotate(270deg);
+    margin: -121px 0px 0px 0px;
+}
+
+.products-menu__content{
+    background: rgba(51, 53, 55, 0.9);
+    width: 0px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: width .7s;
+
+    @include tablets{
+        height: 615px;
+    }
+
+    @include phones{
+        height: 543px;
+    }
+}
+
+.products-menu__container{
+    padding: 40px 73px 45px 26px;
+
+    @include phones{
+        padding: 20px 0px 0px 10px;
+    }
+}
+
+.products-menu-section__title{
+    position: absolute;
+}

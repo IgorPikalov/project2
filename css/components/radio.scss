@@ -1,0 +1,59 @@
+.radio{
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+
+    &--checkbox{
+        .radio__visible{
+            border-radius: 0;
+
+            &:before{
+                background: url("./../../img/Vector\ \(8\).png") center no-repeat;
+            }
+        }
+    }
+
+    &:last-child{
+        @include phones{
+            align-items: center;
+        }
+    }
+}
+
+.radio__elem{
+    display: none;
+
+    &:checked ~ .radio__visible{
+        &::before{
+            display: block;
+        }
+    }
+}
+
+.radio__visible{
+    width: rem(26px);
+    height: rem(26px);
+    position: relative;
+    border-radius: 50%;
+    background: #FFFFFF;
+
+    &:before{
+        content: "";
+        width: rem(14px);
+        height: rem(14px);
+        background: #FEDB3F;
+        border-radius: 50%;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.radio__title{
+    margin: rem(-22px) rem(25px) rem(14px) rem(35px);
+    font-size: rem(18px);
+    color: white;
+}
+

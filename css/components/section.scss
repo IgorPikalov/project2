@@ -1,0 +1,27 @@
+.section{
+    height: 100vh;
+    min-height: rem(650px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section__title{
+    font-size: rem(48px);
+    font-weight: bold;
+    margin-bottom: rem(60px);
+    text-align: center;
+}
+
+.section__caption{
+    text-transform: uppercase;
+    font-size: rem(48px);
+    font-weight: bold;
+    margin-bottom: rem(60px);
+    text-align: center;
+    color: white;
+
+    @include tablets{
+        margin: rem(20px) rem(0px) rem(0px) rem(0px);
+    }
+}

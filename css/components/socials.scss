@@ -1,0 +1,43 @@
+.socials{
+    display: flex;
+}
+
+.socials__list{
+    display: flex;
+
+    @include phones{
+        margin: rem(5px) rem(0px) rem(0px) rem(-25px);
+    }
+}
+
+.socials__link{
+    display: block;
+    text-decoration: none;
+    width: rem(45px);
+    height: rem(28px);
+    background: center center no-repeat;
+}
+
+.socials__item--icon--vk{
+    background-image: url("./../../img/css_sprites\ \(5\).png");
+    background-position: rem(-5px) rem(-9px);
+}
+
+.socials__item--icon--fb{
+    background-image: url("./../../img/css_sprites\ \(5\).png");
+    background-position: rem(-55px) rem(-13px);
+}
+
+.socials__item--icon--inst{
+    background-image: url("./../../img/css_sprites\ \(5\).png");
+    background-position: rem(-104px) rem(-13px);
+}
+
+.socials__item--icon--tg{
+    background-image: url("./../../img/css_sprites\ \(5\).png");
+    background-position: rem(-150px) rem(-12px);
+
+    @include phones{
+        background-position: rem(-160px) rem(-12px);
+    }
+}

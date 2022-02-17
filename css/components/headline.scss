@@ -1,0 +1,25 @@
+.headline{
+    margin-bottom: rem(60px);
+
+}
+
+.headline__title{
+    margin-bottom: rem(25px);
+    text-transform: uppercase;
+    
+    @include phones{
+        width: 105%;
+        font-size: rem(42px);
+    }
+}
+
+.headline__subtitle{
+    color: #666666;
+    text-align: center;
+    padding: rem(0px) 25%;
+
+    @include phones{
+        padding: 0 5%;
+    }
+}
+
