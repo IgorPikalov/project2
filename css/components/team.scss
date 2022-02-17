@@ -32,7 +32,17 @@
                 margin: rem(0px) rem(0px) rem(0px) rem(10px);
             }
         }
+
+        .team__content{
+            @include tablets{
+                display: block;
+                height: 380px !important;
+                overflow: hidden;
+                transition: height .8s;
+            }
+        }
     }
+
 }
 
 .team__member{
@@ -72,6 +82,11 @@
     overflow: hidden;
     transition: height .3s;
     height: 0%;
+
+    @include tablets{
+        height: 0px;
+    }
+    
 }
 
 .team__content-block{
@@ -95,3 +110,5 @@
         align-items: center;
     }
 }
+
+
