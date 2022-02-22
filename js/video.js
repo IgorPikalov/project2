@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', (e) =>{
     let playButtons = document.querySelectorAll('.play');
     for(let i = 0; i < playButtons.length; i++) {
         playButtons[i].addEventListener('click',playStop);
-    }
+    };
 
-    let micControl = document.getElementById('miclvl');
+    let micControl = document.getElementById('micLevel');
     micControl.addEventListener('click', soundOf);
 
-    durationControl = document.getElementById('durationlvl');
+    durationControl = document.getElementById('durationLevel');
     durationControl = addEventListener('mousedown', stopInterval);
     durationControl = addEventListener('click', setVideoDuration);
 
     durationControl.min = 0;
     durationControl.value = 0;
 
-    soundControl = document.getElementById('volumelvl');
+    soundControl = document.getElementById('volumeLevel');
     soundControl.addEventListener('click', changeSoundVolume);
     soundControl.addEventListener('mouseup', changeSoundVolume);
 
@@ -75,7 +75,7 @@ function changeSoundVolume(){
 };
 
 function soundOf(){
-    if(video.volume === 0){
+    if(video.volume == 0){
         video.volime = soundLevel;
         soundControl.value = soundLevel * 10;
     } else {
