@@ -18,44 +18,38 @@ document.addEventListener('DOMContentLoaded', (e) =>{
     micControl.addEventListener('click', soundOf);
 
     durationControl = document.getElementById('durationLevel');
-    durationControl = addEventListener('mousedown', stopInterval);
-    durationControl = addEventListener('click', setVideoDuration);
 
     durationControl.min = 0;
     durationControl.value = 0;
 
     soundControl = document.getElementById('volumeLevel');
-    soundControl.addEventListener('click', changeSoundVolume);
-    soundControl.addEventListener('mouseup', changeSoundVolume);
 
     soundControl.min = 0;
     soundControl.max = 10;
 
     soundControl.value = soundControl.max;
+
 });
 
 function playStop(){
     let playImg = document.querySelector('.video__play');
     playImg.classList.toggle('video__play--active');
 
-    durationControl.max = video.duration;
-
     if(video.paused){
         video.play();
         intervalId = setInterval(updateDuration, 1000/66);
     } else {
         video.pause();
-        clearInterval(intervalId);
     }
-};
-
-function updateDuration() {
-    durationControl.value = video.currentTime;
 };
 
 function stopInterval(){
     video.pause();
     clearInterval(intervalId);
+};
+
+function updateDuration() {
+    durationControl.value = video.currentTime;
 };
 
 function setVideoDuration(){
