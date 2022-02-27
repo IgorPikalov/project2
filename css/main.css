@@ -943,7 +943,8 @@ header {
 
 @media screen and (max-width: 480px) {
   .footer__contacts-phone {
-    padding: 1rem 0rem 0rem 2.5rem;
+    padding: 0rem 0rem 0rem 1.5rem;
+    font-size: 0.88888889rem;
   }
 }
 
@@ -951,6 +952,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: -0.3888888889rem 3.11111111rem 0.5rem 0rem;
 }
 
 .socials__list {
@@ -960,7 +962,7 @@ header {
 }
 @media screen and (max-width: 480px) {
   .socials__list {
-    margin: 0.2777777778rem 0rem 0rem -1.3888888889rem;
+    margin: -1.7222222222rem 0rem 0rem -1.3888888889000004rem;
   }
 }
 
@@ -1656,14 +1658,14 @@ header {
 }
 @media screen and (max-width: 768px) {
   .products-menu__image {
-    height: 40rem;
-    width: 5.6666666667rem;
+    height: 40.055556rem;
+    transform: translateY(12.8888889rem);
   }
 }
 @media screen and (max-width: 480px) {
   .products-menu__image {
     height: 40rem;
-    width: 5.6666666667rem;
+    transform: translateY(12.8888889rem);
   }
 }
 
